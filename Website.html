@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resep Makanan - Bootstrap</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+     background: url('https://www.shutterstock.com/image-photo/food-seasoning-background-blue-coloured-260nw-650105620.jpg') no-repeat center center fixed;
+        background-size: cover;
+      font-family: 'Arial', sans-serif;
+
+    }
+    .hero {
+      background-size: cover;
+      background-position: center;
+      padding: 100px 0;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .recipe-card { margin-bottom: 20px; }
+    .card-img-top { height: 200px; object-fit: cover; }
+    .navbar-brand { font-weight: bold; }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">🍽 Resep Makanan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Beranda</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Kategori
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#makanan-utama">Makanan Utama</a></li>
+              <li><a class="dropdown-item" href="#makanan-penutup">Makanan Penutup</a></li>
+              <li><a class="dropdown-item" href="#minuman">Minuman</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#recipes">Resep</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section dengan Carousel -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://img.qraved.co/v2/image/data/2016/09/22/Ayam_Betutu_Khas_Bali_2_1474542488119-x.jpg" class="d-block w-100" alt="Resep Lezat" style="height: 450px; object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Selamat Datang di Website Resep Makanan</h3>
+              <p>Temukan resep lezat untuk hidangan favorit Anda!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Makanan Sehat" style="height: 450px; object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Makanan Sehat dan Bergizi</h3>
+              <p>Jaga kesehatan dengan resep alami.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=1350&q=80" class="d-block w-100" alt="Hidangan Internasional" style="height: 450px; object-fit: cover;">
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Hidangan Internasional</h3>
+              <p>Cicipi resep dari seluruh dunia!</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kategori -->
+  <section id="categories" class="container my-5">
+    <h2 class="text-center mb-4">Kategori Resep</h2>
+    <div class="row text-center">
+      <div id="makanan-utama" class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="https://nibble-images.b-cdn.net/nibble/original_images/resep_nasi_goreng_jawa_07_535176151c.jpeg?class=large" class="card-img-top" alt="Makanan Utama">
+          <div class="card-body">
+            <h5 class="card-title">Makanan Utama</h5>
+            <p class="card-text">Hidangan berat seperti nasi goreng, ayam goreng, dll.</p>
+            <a href="#recipes" class="btn btn-primary">Lihat Resep</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="makanan-penutup" class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=300&q=80" class="card-img-top" alt="Makanan Penutup">
+          <div class="card-body">
+            <h5 class="card-title">Makanan Penutup</h5>
+            <p class="card-text">Kue, puding, dan es krim yang manis dan lezat.</p>
+            <a href="#recipes" class="btn btn-primary">Lihat Resep</a>
+          </div>
+        </div>
+      </div>
+
+      <div id="minuman" class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=300&q=80" class="card-img-top" alt="Minuman">
+          <div class="card-body">
+            <h5 class="card-title">Minuman</h5>
+            <p class="card-text">Jus, teh, dan minuman segar lainnya.</p>
+            <a href="#recipes" class="btn btn-primary">Lihat Resep</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daftar Resep -->
+  <section id="recipes" class="container my-5">
+    <h2 class="text-center mb-4">Daftar Resep</h2>
+    <div class="row">
+      <!-- Resep 1 -->
+      <div class="col-md-4 recipe-card">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=300&q=80" class="card-img-top" alt="Nasi Goreng">
+          <div class="card-body">
+            <h5 class="card-title">Nasi Goreng <span class="badge bg-success">Mudah</span></h5>
+            <p class="card-text">Bahan utama: Nasi, telur, ayam, sayuran.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalNasiGoreng">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resep 2 -->
+      <div class="col-md-4 recipe-card">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=300&q=80" class="card-img-top" alt="Ayam Goreng">
+          <div class="card-body">
+            <h5 class="card-title">Ayam Goreng <span class="badge bg-warning">Sedang</span></h5>
+            <p class="card-text">Bahan utama: Ayam, tepung, bumbu rempah.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalAyamGoreng">Lihat Detail</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODAL: Nasi Goreng -->
+  <div class="modal fade" id="modalNasiGoreng" tabindex="-1" aria-labelledby="modalNasiGorengLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title" id="modalNasiGorengLabel">Resep Nasi Goreng</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-3" alt="Nasi Goreng">
+          <h6>Bahan-bahan:</h6>
+          <ul>
+            <li>2 piring nasi putih</li>
+            <li>2 butir telur</li>
+            <li>50 gr ayam suwir</li>
+            <li>1 sdm kecap manis</li>
+            <li>1 siung bawang putih</li>
+            <li>Garam dan merica secukupnya</li>
+          </ul>
+          <h6>Cara Memasak:</h6>
+          <ol>
+            <li>Tumis bawang putih hingga harum.</li>
+            <li>Masukkan telur, orak-arik.</li>
+            <li>Tambahkan ayam dan nasi, aduk rata.</li>
+            <li>Tuangkan kecap, bumbui, dan aduk rata lagi.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: Ayam Goreng -->
+  <div class="modal fade" id="modalAyamGoreng" tabindex="-1" aria-labelledby="modalAyamGorengLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-warning">
+          <h5 class="modal-title" id="modalAyamGorengLabel">Resep Ayam Goreng</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=800&q=80" class="img-fluid rounded mb-3" alt="Ayam Goreng">
+          <h6>Bahan-bahan:</h6>
+          <ul>
+            <li>500 gr ayam potong</li>
+            <li>3 siung bawang putih</li>
+            <li>1 sdt ketumbar</li>
+            <li>1 sdt garam</li>
+            <li>100 gr tepung terigu</li>
+          </ul>
+          <h6>Cara Memasak:</h6>
+          <ol>
+            <li>Haluskan bumbu, lumuri ayam.</li>
+            <li>Diamkan 15 menit.</li>
+            <li>Gulingkan ayam ke tepung, goreng hingga matang.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 Resep Makanan | Dibuat dengan ❤️ menggunakan Bootstrap</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
